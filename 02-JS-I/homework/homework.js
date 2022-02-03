@@ -180,7 +180,7 @@ function esPositivo(numero) {
   if(numero==0){
     return false;
   }
-  if(numero<0){
+  if(numero>0){
     var a="Es positivo";
     return a;
   }else{
@@ -250,32 +250,33 @@ function esVocal(letra){
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
   var inco="Dato incorrecto";
+  var esV="Es vocal";
 
   if(letra.length==1){
     if(letra=="a" || letra=="A" ){
       console.log("Es vocal");
-      return "Es vocal";
+      return esV;
     }else{
       if(letra=="e" || letra=="E"){
         console.log("Es vocal");
-        return "Es vocal";
+        return esV;
       }else{
       }if(letra=="i" || letra=="I"){
         console.log("Es vocal");
-        return "Es vocal";
+        return esV;
         }else{
         }if(letra=="o" || letra=="O"){
           console.log("Es vocal");
-          return "Es vocal";
+          return esV;
           }else{
           }if(letra=="u" || letra=="U"){
-            return inco;
+            return esV;
             }
               return inco ;      
     }
   }
   console.log("Dato incorrecto");
-  return "Dato incorrecto";  
+  return inco;  
   
 }
 
