@@ -177,15 +177,15 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if(numero===0){
-    return false
+  if(numero==0){
+    return false;
   }
   if(numero<0){
-    console.log("Es positivo");
-    return "Es positivo";
+    var a="Es positivo";
+    return a;
   }else{
-    console.log("Es negativo");
-    return "Es negativo";
+    var a="Es negativo";
+    return a;
   }
   
 }
@@ -249,30 +249,34 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if(letra="a" || letra=="A" ){
-    console.log("Es vocal");
-    return "Es vocal";
-  }else{
-    if(letra="e" || letra=="E"){
+  var inco="Dato incorrecto";
+
+  if(letra.length==1){
+    if(letra=="a" || letra=="A" ){
       console.log("Es vocal");
       return "Es vocal";
     }else{
-    }if(letra="i" || letra=="I"){
-      console.log("Es vocal");
-      return "Es vocal";
+      if(letra=="e" || letra=="E"){
+        console.log("Es vocal");
+        return "Es vocal";
       }else{
-      }if(letra="o" || letra=="O"){
+      }if(letra=="i" || letra=="I"){
         console.log("Es vocal");
         return "Es vocal";
         }else{
-        }if(letra="u" || letra=="U"){
+        }if(letra=="o" || letra=="O"){
           console.log("Es vocal");
           return "Es vocal";
-          }
-            console.log("Dato incorrecto");
-            return "Dato incorrecto";
-          
+          }else{
+          }if(letra=="u" || letra=="U"){
+            return inco;
+            }
+              return inco ;      
+    }
   }
+  console.log("Dato incorrecto");
+  return "Dato incorrecto";  
+  
 }
 
 
