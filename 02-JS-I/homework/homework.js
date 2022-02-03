@@ -60,22 +60,21 @@ function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(x=y){
+  if(x===y){
     return true;
-  }else{
-    return false;
   }
+    return false;
+  
   }
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(str1.length=str2.length){
+  if(str1.length===str2.length){
     return true;
-  }else{
-    return false;
   }
+  return false;
   
 }
 
@@ -106,7 +105,7 @@ function mayorQueCincuenta(num) {
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  return x/y;
+  return x%y;
   
 }
 
@@ -178,10 +177,10 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if(num==0){
+  if(numero===0){
     return false
   }
-  if(num<0){
+  if(numero<0){
     console.log("Es positivo");
     return "Es positivo";
   }else{
@@ -210,7 +209,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return "Hola "+nombre+" !";
+  return "Hola "+nombre+"!";
   
 }
 
@@ -250,23 +249,29 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if(letra="a"|| letra=="A" ){
+  if(letra="a" || letra=="A" ){
     console.log("Es vocal");
+    return "Es vocal";
   }else{
-    if(letra="e"|| letra=="E"){
+    if(letra="e" || letra=="E"){
       console.log("Es vocal");
+      return "Es vocal";
     }else{
-    }if(letra="i"|| letra=="I"){
+    }if(letra="i" || letra=="I"){
       console.log("Es vocal");
+      return "Es vocal";
       }else{
       }if(letra="o" || letra=="O"){
         console.log("Es vocal");
+        return "Es vocal";
         }else{
-        }if(letra="u"|| letra=="U"){
+        }if(letra="u" || letra=="U"){
           console.log("Es vocal");
-          }else{
-            console.log("Dato incorrecto");
+          return "Es vocal";
           }
+            console.log("Dato incorrecto");
+            return "Dato incorrecto";
+          
   }
 }
 
