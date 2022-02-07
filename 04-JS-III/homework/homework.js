@@ -27,7 +27,7 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-  for(var i =0 ; i < array.length; ++1){
+  for(var i =0 ; i < array.length; i++){
     array[i]=array[i]+1;
   }
   return array;
@@ -38,7 +38,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  array.push(numeros);
+  array.push(elemento);
+  return array;
 }
 
 
@@ -59,8 +60,10 @@ function dePalabrasAFrase(palabras) {
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
   var frase=palabras[0];
-  for(i=1;i<palabras.length-1;i++){
-    frase=frase+palabras[1];
+  if(palabras.length>1){
+    for(i=1;i<palabras.length;i++){
+      frase=frase+" "+palabras[i];
+    }
   }
   return frase;
 }
@@ -95,11 +98,13 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-  var suma_de_test=0, promedio=0;
+  var suma_de_test=0, promedio_=0;
+  
   for(i=0;i<resultadosTest.length;i++){
     suma_de_test=suma_de_test+resultadosTest[i];
   }
-  promedio=suma_de_test/resultadosTest.length;
+  promedio_=suma_de_test/resultadosTest.length;
+  return promedio_;
 }
 
 
@@ -179,8 +184,8 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  var es_=toString(n);
-  if(es_==9){
+  var es_=n.toString();
+  if(es_[0]==9){
     return true;
   }
   return false;
@@ -193,7 +198,7 @@ function todosIguales(arreglo) {
   //Escribe tu código aquí  
   var igual=arreglo[0];
   for(i=0;i<arreglo.length;i++){
-    if(arreglo(i)!==igual){
+    if(arreglo[i]!==igual){
       return false;
     }
   }
@@ -302,11 +307,11 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-  var suma_=numero,guardados=[];
-  for(i=0;i<=10;1++){
+  var suma_=numero,guardados=[],txt="Se interrumpió la ejecución";
+  for(i=0;i<10;i++){
     suma_=suma_+2;
     if(i==suma_){
-      break;
+      return txt;
     }
     guardados.push(suma_);
   }
@@ -322,7 +327,7 @@ function continueStatement(numero) {
   //Pista: usá el statement 'continue'
   // Tu código:
   var array_=[],suma_2=numero;
-  for(i=0;i<=10;1++){
+  for(i=0;i<10;i++){
     if(i===5){
       continue;
     }
